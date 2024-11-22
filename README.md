@@ -868,9 +868,47 @@ body > h1:first-of-type:not(.heading) {
 const categories = [
     { id: 'home', name: 'Home', icon: 'fa-home', 
       services: ['Plumbing', 'Electrical', 'Carpentry', 'Painting', 'Appliance Repair', 'AC/Heating Repair', 'Cleaning Services'] },
-    { id: 'education', name: 'Education', icon: 'fa-graduation-cap',
+      { id: 'education', name: 'Education', icon: 'fa-graduation-cap',
       services: ['Haircut', 'Manicure', 'Pedicure', 'Massage', 'Facial'] },
-    { id: 'occasion', name: 'Occasion', icon: 'fa-calendar-alt',    
+      { id: 'healthcare', name: 'Healthcare', icon: 'fa-heartbeat' ,
+     services: ['TV Repair', 'Phone Repair', 'Computer Repair', 'Furniture Repair'] },
+     { id: 'hospitality', name: 'Hospitality', icon: 'fa-bed' ,
+     services: ['Doctor Visit', 'Nursing', 'Physiotherapy', 'Lab Tests'] },
+     { id: 'retail', name: 'Retail', icon: 'fa-shopping-cart' ,
+    services: ['Tutoring', 'Language Classes', 'Test Prep', 'Skills Training'] },
+    { id: 'manufacturing', name: 'Manufacturing', icon: 'fa-industry' ,
+      services: ['Babysitting', 'Pet Grooming', 'Fitness Trainer'] },
+      { id: 'co-working-space', name: 'Co-Working', icon: 'fa-users' ,
+            services: ['Plumbing', 'Electrical', 'Carpentry', 'Painting', 'Appliance Repair', 'AC/Heating Repair', 'Cleaning Services'] },
+    { id: 'corporate-office', name: 'Corporate', icon: 'fa-briefcase' ,
+      services: ['Haircut', 'Manicure', 'Pedicure', 'Massage', 'Facial'] },
+      { id: 'warehouse', name: 'Warehouse', icon: 'fa-boxes' ,
+     services: ['TV Repair', 'Phone Repair', 'Computer Repair', 'Furniture Repair'] },
+     { id: 'logistics', name: 'Logistics', icon: 'fa-truck' ,
+     services: ['Doctor Visit', 'Nursing', 'Physiotherapy', 'Lab Tests'] },
+     { id: 'residential', name: 'Residential', icon: 'fa-home' ,
+     services: ['Tutoring', 'Language Classes', 'Test Prep', 'Skills Training'] },
+     { id: 'fitness', name: 'Fitness', icon: 'fa-dumbbell' ,
+      services: ['Babysitting', 'Pet Grooming', 'Fitness Trainer'] },
+      { id: 'banks', name: 'Banks', icon: 'fa-university' ,
+     services: ['Plumbing', 'Electrical', 'Carpentry', 'Painting', 'Appliance Repair', 'AC/Heating Repair', 'Cleaning Services'] },
+     { id: 'restaurants', name: 'Restaurants', icon: 'fa-utensils' ,
+    services: ['Haircut', 'Manicure', 'Pedicure', 'Massage', 'Facial'] },
+    { id: 'energy-utilities', name: 'Energy', icon: 'fa-bolt' ,
+     services: ['TV Repair', 'Phone Repair', 'Computer Repair', 'Furniture Repair'] },
+     { id: 'entertainment', name: 'Entertainment', icon: 'fa-film' ,
+     services: ['Doctor Visit', 'Nursing', 'Physiotherapy', 'Lab Tests'] },
+     { id: 'agriculture', name: 'Agriculture', icon: 'fa-seedling' ,
+    services: ['Tutoring', 'Language Classes', 'Test Prep', 'Skills Training'] },
+    { id: 'government', name: 'Government', icon: 'fa-landmark' ,
+      services: ['Babysitting', 'Pet Grooming', 'Fitness Trainer'] },
+      { id: 'construction', name: 'Construction', icon: 'fa-hard-hat' ,
+    services: ['Plumbing', 'Electrical', 'Carpentry', 'Painting', 'Appliance Repair', 'AC/Heating Repair', 'Cleaning Services'] },
+    { id: 'shop', name: 'Shop',  icon: 'fa-store',
+      services: ['Haircut', 'Manicure', 'Pedicure', 'Massage', 'Facial'] },
+      { id: 'banquet-hall', name: 'Banquet Hall', icon: 'fa-building' ,
+     services: ['TV Repair', 'Phone Repair', 'Computer Repair', 'Furniture Repair'] },
+     { id: 'occasion', name: 'Occasion', icon: 'fa-calendar-alt',    
       services: ['Tutoring', 'Language Classes', 'Test Prep', 'Skills Training'] }
 ];
 
@@ -1359,15 +1397,6 @@ return benefits[packageType].map(benefit => `
         function showSupport() {
     alert("Contact our support team at services.deepchatbot@gmail.com or call us at +91 9111478356");
 }
-
-        function populateMenu() {
-            const menuOverlay = document.getElementById('menuOverlay');
-            menuOverlay.innerHTML = `
-                <div class="menu-item" onclick="showSupport()">
-                    <i class="fas fa-headset"></i> Support
-                </div>
-            `;
-        }
 
 // Event Listeners Setup
 function setupEventListeners() {
