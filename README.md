@@ -1360,6 +1360,15 @@ return benefits[packageType].map(benefit => `
     alert("Contact our support team at services.deepchatbot@gmail.com or call us at +91 9111478356");
 }
 
+        function populateMenu() {
+            const menuOverlay = document.getElementById('menuOverlay');
+            menuOverlay.innerHTML = `
+                <div class="menu-item" onclick="showSupport()">
+                    <i class="fas fa-headset"></i> Support
+                </div>
+            `;
+        }
+
 // Event Listeners Setup
 function setupEventListeners() {
     window.addEventListener('click', function(event) {
